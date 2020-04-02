@@ -1,0 +1,765 @@
+/* Basic css */
+@font-face {
+  font-family: "Helvetica Neue LT Std";
+  src: url("../webfonts/HelveticaNeueLTStd-Hv.woff2") format("woff2"),
+    url("../webfonts/HelveticaNeueLTStd-Hv.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Helvetica Neue LT Std Blk";
+  src: url("../webfonts/HelveticaNeueLTStd-Blk.woff2") format("woff2"),
+    url("../webfonts/HelveticaNeueLTStd-Blk.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Helvetica Neue LT Std";
+  src: url("../webfonts/HelveticaNeueLTStd-Bd.woff2") format("woff2"),
+    url("../webfonts/HelveticaNeueLTStd-Bd.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Helvetica Neue LT Std Cn";
+  src: url("../webfonts/HelveticaNeueLTStd-BdCn.woff2") format("woff2"),
+    url("../webfonts/HelveticaNeueLTStd-BdCn.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Helvetica Neue LT Std";
+  src: url("../webfonts/HelveticaNeueLTStd-Md.woff2") format("woff2"),
+    url("../webfonts/HelveticaNeueLTStd-Md.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Helvetica Neue LT Std";
+  src: url("../webfonts/HelveticaNeueLTStd-Lt.woff2") format("woff2"),
+    url("../webfonts/HelveticaNeueLTStd-Lt.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Helvetica Neue LT Std Cn";
+  src: url("../webfonts/HelveticaNeueLTStd-LtCn.woff2") format("woff2"),
+    url("../webfonts/HelveticaNeueLTStd-LtCn.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Minion Pro";
+  src: url("../webfonts/MinionPro-Regular.woff2") format("woff2"),
+    url("../webfonts/MinionPro-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Helvetica Neue LT Std Roman";
+  src: url("../webfonts/HelveticaNeueLTStd-Roman.woff2") format("woff2"),
+    url("../webfonts/HelveticaNeueLTStd-Roman.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Helvetica Neue LT Std", sans-serif;
+  color: #1d1d1b;
+  font-weight: normal;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Helvetica Neue LT Std";
+  font-weight: bold;
+  margin: 0 0 15px;
+  line-height: 1.2;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+a:focus,
+input:focus,
+select:focus,
+button:focus {
+  outline: 0 solid;
+}
+
+/* .container {
+  max-width: 1024px;
+} */
+
+/*
+
+Circle Styles
+
+*/
+
+#menu {
+  display: block;
+  margin: 0 auto;
+  /*overflow: visible;*/
+  /* uncomment this if you are using bouncing animations*/
+}
+
+a {
+  cursor: pointer;
+  /* SVG &lt;a&gt; elements don't get this by default, so you need to explicitly set it */
+  outline: none;
+}
+
+/* You can change these default styles any way you want */
+
+.item .sector {
+  transition: all 0.1s linear;
+  fill: #fff;
+  stroke: #111;
+}
+#item-1 .sector,
+#item-5 .sector {
+  fill: #5372ad;
+  stroke: #5372ad;
+}
+#item-2 .sector,
+#item-6 .sector {
+  fill: #0052a2;
+  stroke: #0052a2;
+}
+#item-3 .sector,
+#item-7 .sector {
+  fill: #ccd1e0;
+  stroke: #ccd1e0;
+}
+#item-4 .sector,
+#item-8 .sector {
+  fill: #94a1c4;
+  stroke: #94a1c4;
+}
+
+.item:hover .sector,
+.item:focus .sector {
+  fill: #eee;
+}
+
+.menu-trigger {
+  font-family: "Helvetica Neue LT Std";
+  font-weight: 900;
+  fill: #a8aaad;
+  cursor: auto;
+  pointer-events: none;
+  /* KEEP THIS to make sure it stays clickable even when SVG's pointer events is disabled */
+}
+
+.menu-trigger:hover,
+.menu-trigger:focus {
+  cursor: pointer;
+}
+
+symbol {
+  font-family: "Helvetica Neue LT Std";
+  font-weight: 900;
+  overflow: visible;
+  font-size: 20px;
+  text-align: center;
+  text-shadow: 2px 2px 4px #003b7e;
+  /* KEEP THIS so that text will not get cut off it it is wider than the icon width */
+}
+.fr symbol {
+  font-size: 19px;
+}
+
+/* Main Styles */
+
+.header-area {
+  min-height: 75px;
+  background-color: #0052a2;
+  padding: 15px 0px;
+}
+
+.navigation-area {
+  padding: 20px 0px;
+  min-height: calc(100vh - 163px);
+}
+.navigation-area .title {
+  font-family: "Helvetica Neue LT Std";
+  font-weight: 300;
+  font-size: 32px;
+  color: #0052a2;
+}
+.navigation-area .title span {
+  color: #e60088;
+}
+
+.navigation-wrapp {
+  padding: 10px 0px;
+}
+.footer-area {
+  background-color: #0b53a1;
+  color: #fff;
+  padding: 20px 0px;
+}
+
+.footer-area a {
+  color: #fff;
+}
+
+.footer-content-wrap {
+  position: relative;
+  padding-left: 70px;
+}
+
+.footer-content-wrap .logo {
+  position: absolute;
+  left: 0;
+  top: 3px;
+}
+
+.footer-content-wrap .logo img {
+  width: 50px;
+  height: 50px;
+}
+
+.footer-content-wrap p {
+  font-size: 10px;
+  margin-bottom: 0px;
+  font-family: "Helvetica Neue LT Std Roman";
+  font-weight: normal;
+}
+
+.footer-content-wrap p a {
+  text-decoration: underline;
+}
+
+.footer-menu ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.footer-menu ul li {
+  display: inline-block;
+}
+
+.footer-menu ul li a {
+  text-transform: uppercase;
+  font-size: 15px;
+  padding: 5px 10px;
+  display: inline-block;
+  border-left: 1px solid #fff;
+  font-family: "Helvetica Neue LT Std Roman";
+  font-weight: normal;
+}
+
+.footer-menu ul li:first-child a {
+  border: 0px;
+}
+
+.footer-menu ul li.active a {
+  color: #bfd4e8;
+}
+
+.header-area h4 {
+  color: #8a9bcd;
+  font-family: "Helvetica Neue LT Std Blk";
+  font-weight: 900;
+  font-size: 32px;
+  margin-bottom: 0px;
+}
+.header-area h5 {
+  color: #8a9bcd;
+  font-family: "Helvetica Neue LT Std Blk";
+  font-weight: 900;
+  font-size: 20px;
+  margin-bottom: 0px;
+}
+
+.board-ticker {
+  font-family: "Helvetica Neue LT Std";
+  font-weight: 500;
+  background-color: #e60088;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+  line-height: 35px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+
+.board-body .board-top {
+  background-color: #0052a2;
+  text-align: center;
+  padding: 10px 5px;
+}
+
+.board-body {
+  border: 4px solid #0052a2;
+  border-radius: 10px;
+  padding: 12px 5px 18px;
+  position: relative;
+  box-shadow: 0px 0px 15px #cecece;
+  min-height: 230px;
+  width: 162px;
+  margin: 0 auto;
+}
+.board-body:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -55px;
+  background-image: url(../img/clip-top@2x.png);
+  width: 50%;
+  height: 80px;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transform: translateX(-50%);
+}
+
+.board-body .board-top h4 {
+  color: #fff;
+  margin-bottom: 0px;
+  font-size: 14px;
+  font-family: "Helvetica Neue LT Std Cn";
+  font-weight: bold;
+}
+
+.patient-borad-area {
+  padding: 50px 0px;
+  min-height: calc(100vh - 163px);
+}
+
+.board-content ul {
+  list-style: none;
+  margin: 0px;
+  padding: 5px 6px;
+}
+
+.board-content ul li {
+  display: block;
+  position: relative;
+  padding-left: 15px;
+  color: #0052a2;
+  font-size: 12px;
+}
+
+.board-content ul li:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 6px;
+  height: 6px;
+  background-color: #e60088;
+}
+
+.board-footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  padding: 2px 0px;
+}
+
+.board-footer h4 {
+  color: #0052a2;
+  font-size: 14px;
+  margin-bottom: 0px;
+  font-family: "Helvetica Neue LT Std";
+  font-weight: bold;
+}
+.single-board {
+  margin-bottom: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: inline-block;
+}
+.doctors-info {
+  position: relative;
+  padding: 5px 0px;
+  padding-left: 80px;
+}
+
+.doctors-info .profile-avatar {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.doctors-info .profile-avatar img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.doctors-info h4 {
+  font-size: 10px;
+  padding: 0px;
+  color: #fff;
+  font-family: "Helvetica Neue LT Std Roman";
+  margin-bottom: 3px;
+  font-weight: normal;
+}
+
+.case-study-wrapp {
+  padding: 30px 0px;
+}
+
+.case-study-wrapp .title {
+  color: #0052a2;
+  font-size: 38px;
+  font-family: "Helvetica Neue LT Std Blk";
+  font-weight: 900;
+}
+
+.info-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.info-list ul li {
+  display: block;
+  color: #0052a2;
+  font-size: 17px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.info-list ul li:before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #e60088;
+  position: absolute;
+  border-radius: 50%;
+  top: 10px;
+  left: 0;
+}
+
+.info-list ul.small li {
+  font-size: 14px;
+  padding-left: 20px;
+}
+
+.info-list ul.small li:before {
+  width: 7px;
+  height: 7px;
+  top: 10px;
+}
+
+.case-study-wrapp .title .plus {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+}
+
+.medical-wrapp {
+  margin-top: 25px;
+  border-top: 1px solid #0052a2;
+  padding-top: 25px;
+}
+
+.medical-wrapp p {
+  font-size: 16px;
+  color: #0052a2;
+  font-family: "Helvetica Neue LT Std";
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+
+.medical-wrapp p span {
+  color: #e60088;
+}
+
+.single-case-study .container {
+  /* min-height: calc(100vh - 218px); */
+}
+.case-study-area.owl-carousel .owl-item img {
+  display: inline-block;
+}
+
+.case-study-area .owl-dots .owl-dot {
+  width: 12px;
+  height: 12px;
+  background-color: transparent;
+  margin: 5px;
+  border-radius: 50%;
+  border: 1px solid #0052b2;
+}
+
+.case-study-area .owl-dots {
+  text-align: center;
+  margin-bottom: 10px;
+  /* position: absolute; */
+  bottom: 0;
+  width: 100%;
+}
+
+.case-study-area .owl-dots .owl-dot.active {
+  background-color: #0052a2;
+}
+
+.info-box {
+  padding: 20px;
+  box-shadow: 5px 5px 9px #c6daeb;
+  padding-top: 10px;
+  position: relative;
+}
+
+.info-box:after {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: -15px;
+  width: 30px;
+  height: 33px;
+  background-image: url(../img/doc@2x.png);
+  background-size: contain;
+}
+
+.case-study-wrapp .sub-title {
+  font-family: "Helvetica Neue LT Std";
+  font-weight: bold;
+  font-size: 15px;
+  color: #0052a2;
+}
+.case-study-wrapp h2.sub-title {
+  font-family: "Helvetica Neue LT Std Blk";
+  font-weight: 900;
+  font-size: 18px;
+}
+
+h2.sub-title {
+  color: #0052a2;
+  font-family: "Helvetica Neue LT Std Blk";
+  font-weight: 900;
+  font-size: 22px;
+}
+
+.info-list ul.line-style li:before {
+  width: 12px;
+  height: 2px;
+  border-radius: 0px;
+  top: 10px;
+}
+.info-list ul.small.line-style li:before {
+  top: 12px;
+}
+
+.info-list ul.line-style {
+  padding-left: 15px;
+}
+.text-btm {
+  margin: 25px 0px;
+}
+.text-btm p {
+  font-size: 14px;
+  font-family: "Helvetica Neue LT Std";
+  font-weight: normal;
+}
+h5.title {
+  font-family: "Helvetica Neue LT Std";
+  font-weight: bold;
+  font-size: 16px;
+  color: #0052a2;
+}
+
+.theme-btn {
+  background-color: #0b53a1;
+  color: #fff;
+  width: 100%;
+  border: none;
+  padding: 10px 0px;
+  font-size: 14px;
+  font-family: "Helvetica Neue LT Std";
+  font-weight: bold;
+}
+
+.footnote p {
+  font-size: 16px;
+  font-family: "Helvetica Neue LT Std Roman";
+  font-weight: normal;
+  margin: 0px;
+  font-size: 10px;
+}
+
+.footnote {
+  position: absolute;
+  bottom: 0px;
+  z-index: 9;
+  width: 50%;
+}
+
+.medical-wrapp .theme-btn {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 992px) {
+  .xare-modal .modal-lg,
+  .xare-modal .modal-xl {
+    max-width: 1000px;
+  }
+}
+
+.xare-modal .case-study-wrapp {
+  min-height: auto;
+  padding: 0px;
+}
+
+.xare-modal .modal-content {
+  padding: 80px 30px 115px;
+  min-height: 80vh;
+  border: 0;
+  border-radius: 0px;
+}
+
+.xare-modal .case-study-wrapp .title {
+  font-size: 18px;
+}
+
+.xare-modal .case-study-wrapp .title span {
+  color: #e60088;
+}
+
+.xare-modal .info-list ul li {
+  font-size: 14px;
+  padding-left: 20px;
+}
+
+.xare-modal .info-list ul li:before {
+  width: 7px;
+  height: 7px;
+  top: 10px;
+}
+
+.xare-modal .info-list ul ul {
+  padding-left: 20px;
+}
+
+.xare-modal .info-list ul ul li:before {
+  width: 7px;
+  height: 2px;
+  border-radius: 0px;
+}
+
+.xare-modal .info-list ul ul li {
+  padding-left: 15px;
+}
+
+.xare-modal .info-list {
+  margin-bottom: 30px;
+}
+
+.xare-modal .close {
+  position: absolute;
+  right: 20px;
+  top: 5px;
+  color: #0b53a1;
+  opacity: 1;
+  font-size: 50px;
+}
+
+.xare-modal .info-list ul.line-style li:before {
+  width: 10px;
+  height: 2px;
+  border-radius: 0px;
+  top: 10px;
+}
+
+.xare-modal .info-box.case-study-wrapp {
+  padding: 15px;
+}
+
+.xare-modal .info-box .info-list {
+  margin-bottom: 0px;
+}
+
+.xare-modal .info-box:before {
+  display: none;
+}
+
+.xare-modal .case-study-wrapp .sub-title {
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.xare-modal .foot-note p {
+  font-size: 10px;
+  margin-bottom: 0px;
+  color: #0052a2;
+}
+
+.xare-modal .foot-note {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 20px;
+  padding-left: 35px;
+}
+sub {
+  vertical-align: sub;
+  font-size: smaller;
+}
+
+.info-box .modal-plus {
+  position: absolute;
+  right: -15px;
+  top: -20px;
+  width: 30px;
+  display: inline-block;
+}
+
+.case-study-area {
+  padding-top: 85px;
+  padding-bottom: 88px;
+}
+.footer-area.abs {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  z-index: 1;
+}
+
+.case-study-area .owl-dots .owl-dot:first-child {
+  margin-left: 70px;
+}
+
+.header-area.abs {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 9;
+}
